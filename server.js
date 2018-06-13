@@ -4,14 +4,14 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/passport');
 
-// Sets up Expres app
-var app = express();
-
 // Port will work on local host 8080
 var PORT = process.env.PORT || 8080;
 
 // Require all of our models for syncing
-var db = require('.models');
+var db = require('./models');
+
+// Sets up Expres app
+var app = express();
 
 // Standard bodyParser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -30,14 +30,16 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-// Require aboutRoutes file 
+// Require about - routes file
 require('./routes/about-routes.js')(app);
 
-// Require chatRoutes.js file
-require('./routes/chat-routes.js')(app);
+//  Require chat-routes file
+// // require('./routes/chat-routes.js')(app);
 
-// Require mentorRoutes.js file
-require('./routes/mentors-routes.js')(app);
+//  Require mentors-api-routes file
+require('./routes/mentors-api-routes.js')(app);
+//  Require mentors-html-routes file to server
+require('./routes/mentors-html-routes.js')(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {
