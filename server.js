@@ -27,11 +27,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Require html-routes and api-routes files
-require("./routes/html-routes.js")(app);
+
 require("./routes/api-routes.js")(app);
 
 // Require about - routes file
-require('./routes/about-routes.js')(app);
+// require('./routes/about-routes.js')(app);
 
 //  Require chat-routes file
 // // require('./routes/chat-routes.js')(app);

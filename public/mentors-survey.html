@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,7 +33,15 @@
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -286,13 +294,7 @@
         </div>
     </div>
 
-    <!-- Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+
 
 
     <script type="text/javascript">
@@ -318,47 +320,50 @@
                 // Check if form is done
                 if (validateForm() == true) {
                     // Add new friend
+                    // console.log("test" + typeof $('#question2').val())
+                    var scores = parseInt($('#question1').val()) +
+                        parseInt($('#question2').val()) +
+                        parseInt($('#question3').val()) +
+                        parseInt($('#question4').val()) +
+                        parseInt($('#question5').val()) +
+                        parseInt($('#question6').val()) +
+                        parseInt($('#question7').val()) +
+                        parseInt($('#question8').val()) +
+                        parseInt($('#question9').val()) +
+                        parseInt($('#question10').val());
+                    console.log(scores)
+
                     var newMentor = {
                         name: $('#name').val().trim(),
                         email: $('#email').val().trim(),
                         photo: $('#photo').val().trim(),
-                        scores: [
-                            $('#question1').val(),
-                            $('#question2').val(),
-                            $('#question3').val(),
-                            $('#question4').val(),
-                            $('#question5').val(),
-                            $('#question6').val(),
-                            $('#question7').val(),
-                            $('#question8').val(),
-                            $('#question9').val(),
-                            $('#question10').val(),
-                        ]
+                        scores: scores
                     };
 
                     var currentURL = window.location.origin;
 
                     // data = response.json from apiRoutes.js
-                    $.post(currentURL + "/api/mentors", newMentor, function (data) {
-                        $("#mentorName").text(data.sameName);
-                        $("#mentorEmail").text(data.sameEmail);
-                        $("#mentorImage").attr("src", data.samePicture);
+                    $.post("/api/mentors", newMentor, function (data) {
+                        console.log(data)
+                        $("#mentorName").text(data.name);
+                        $("#mentorEmail").text(data.email);
+                        $("#mentorImage").attr("src", data.photo);
                     });
 
-                    $('.modal').modal();
-                    $('#name').val("");
-                    $('#email').val("");
-                    $('#photo').val("");
-                    $('#question1').val("");
-                    $('#question2').val("");
-                    $('#question3').val("");
-                    $('#question4').val("");
-                    $('#question5').val("");
-                    $('#question6').val("");
-                    $('#question7').val("");
-                    $('#question8').val("");
-                    $('#question9').val("");
-                    $('#question10').val("");
+                    // $('#exampleModal').modal("toggle");
+                    // $('#name').val("");
+                    // $('#email').val("");
+                    // $('#photo').val("");
+                    // $('#question1').val("");
+                    // $('#question2').val("");
+                    // $('#question3').val("");
+                    // $('#question4').val("");
+                    // $('#question5').val("");
+                    // $('#question6').val("");
+                    // $('#question7').val("");
+                    // $('#question8').val("");
+                    // $('#question9').val("");
+                    // $('#question10').val("");
 
                 } else {
 
