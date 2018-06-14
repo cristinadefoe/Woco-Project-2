@@ -37,22 +37,78 @@
                 Menu
                 <i class="fa fa-bars"></i>
             </button>
+
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
+
+                    <!-- About nav -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About US</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#about">About US</a>
+                                <a class="dropdown-item" href="#offer">What We Offer</a>
+                                <a class="dropdown-item" href="#founders">The Founders</a>
+                                <a class="dropdown-item" href="#contact">Contact US</a>
+                            </div>
+                        </div>
                     </li>
+
+                    <!-- Friends' nav -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#offer">What we Offer</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Friends</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Home</a>
+                                <a class="dropdown-item" href="#">Survey</a>
+                                <a class="dropdown-item" href="#">Events</a>
+                            </div>
+                        </div>
                     </li>
+
+                    <!-- Mentors' nav -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#team">Founders</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Mentors</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Home</a>
+                                <a class="dropdown-item" href="#">Networking</a>
+                                <a class="dropdown-item" href="#">Events</a>
+                            </div>
+                        </div>
                     </li>
+
+                    <!-- Dating nav -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact US</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dating</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Home</a>
+                                <a class="dropdown-item" href="#">Survey</a>
+                                <a class="dropdown-item" href="#">Rate Your Date</a>
+                                <a class="dropdown-item" href="#">Search Results</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Blog nav -->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Blog</a>
+                    </li>
+
+                    <!-- Shop nav -->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Shop</a>
+                    </li>
+
+                    <!-- Login nav -->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
 
@@ -67,54 +123,13 @@
         </div>
     </header>
 
-    <!-- Services -->
-    <section id="offer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">What we offer</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Mentors</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore
-                        harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Friends</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore
-                        harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Dating</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore
-                        harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About -->
     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Get to Know Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">At Woco, we believe in inspiring and cultivating a culture of fearless and tech-savvy women.</h3>
                 </div>
             </div>
 
@@ -185,8 +200,49 @@
         </div>
     </section>
 
-    <!-- Team -->
-    <section class="bg-light" id="team">
+    <!-- Services -->
+    <section id="offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">What we offer</h2>
+                    <h3 class="section-subheading text-muted">If you're looking for a mentor, meet new friends and find a date you've come to the right place.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Mentors</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore
+                        harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Friends</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore
+                        harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Dating</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore
+                        harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="bg-light" id="founders">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">

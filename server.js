@@ -26,20 +26,14 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Require html-routes and api-routes files
-
+// Require api-routes files
 require("./routes/api-routes.js")(app);
 
-// Require about - routes file
-// require('./routes/about-routes.js')(app);
+// Require html-routes file to server
+require('./routes/main-html-routes.js')(app);
 
-//  Require chat-routes file
-// // require('./routes/chat-routes.js')(app);
-
-//  Require mentors-api-routes file
-require('./routes/mentors-api-routes.js')(app);
-//  Require mentors-html-routes file to server
-require('./routes/mentors-html-routes.js')(app);
+// Require html-routes file to server (passport authentication)
+require('./routes/html-routes.js')(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {

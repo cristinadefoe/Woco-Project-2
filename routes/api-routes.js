@@ -1,3 +1,6 @@
+// API ROUTE to Sequelize Passport.js 
+// *****************************************************************
+
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
@@ -53,3 +56,131 @@ module.exports = function (app) {
     });
 
 };
+// API ROUTE to Sequelize Passport.js ends here
+// *****************************************************************
+
+// API ROUTE to mentors 
+// *****************************************************************
+var mentorsData = require('../data/mentors.js');
+var path = require('path');
+var db = require("../models");
+module.exports = function (app) {
+
+    app.get('/api/mentors', function (req, res) {
+
+        // Display mentors data in json format
+        res.json(mentorsData);
+    });
+
+    app.post('/api/mentors', function (req, res) {
+        var userInput = req.body;
+        console.log(userInput)
+        var mentorMatch = {
+            name: "",
+            photo: "",
+            email: "",
+            mentorDifference: 1000
+        }
+
+        db.Mentor.findAll({})
+            .then(data => {
+                for (var i = 0; i < data.length; i++) {
+                    console.log(`mentor name: ${data[i].name}`)
+                    var mentor = data[i]
+                    var diff = Math.abs(userInput.scores - mentor.scores)
+                    if (diff < mentorMatch.mentorDifference) {
+                        mentorMatch.name = mentor.name;
+                        mentorMatch.photo = mentor.photo;
+                        mentorMatch.email = mentor.email;
+                        mentorMatch.mentorDifference = diff;
+                    }
+                }
+
+                res.json(mentorMatch)
+                // Loop over the data and compare the scores in data with the userInput score
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+        // Add new user
+        mentorsData.push(userInput);
+        db.Mentor.create(userInput)
+            .then(data => {
+                console.log("from .then", data.dataValues.scores)
+            })
+            .catch(err => console.log(err))
+
+
+
+        // Sending response back to mentors-survey.html
+
+
+        // res.json({ sameName: sameName, sameEmail: sameEmail, samePicture: samePicture });
+    });
+
+};
+// API ROUTE to mentors ends here
+// *****************************************************************
+
+// API ROUTE to friends
+// *****************************************************************
+var friendsData = require('../data/friends.js');
+var path = require('path');
+var db = require("../models");
+module.exports = function (app) {
+
+    app.get('/api/friends', function (req, res) {
+
+        // Display friends data in json format
+        res.json(friendsData);
+    });
+
+    app.post('/api/friends', function (req, res) {
+        var userInput = req.body;
+        console.log(userInput)
+        var friendMatch = {
+            name: "",
+            photo: "",
+            email: "",
+            friendDifference: 1000
+        }
+
+        db.Friend.findAll({})
+            .then(data => {
+                for (var i = 0; i < data.length; i++) {
+                    console.log(`friend name: ${data[i].name}`)
+                    var mentor = data[i]
+                    var diff = Math.abs(userInput.scores - mentor.scores)
+                    if (diff < friendMatch.friendDifference) {
+                        friendMatch.name = friend.name;
+                        friendMatch.photo = friend.photo;
+                        friendMatch.email = friend.email;
+                        friendMatch.friendDifference = diff;
+                    }
+                }
+
+                res.json(friendMatch)
+                // Loop over the data and compare the scores in data with the userInput score
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+        // Add new user
+        mentorsData.push(userInput);
+        db.Mentor.create(userInput)
+            .then(data => {
+                console.log("from .then", data.dataValues.scores)
+            })
+            .catch(err => console.log(err))
+        // Sending object sameName and samePicture to backend
+        // Sending response back to mentors-survey.html
+
+
+        // res.json({ sameName: sameName, sameEmail: sameEmail, samePicture: samePicture });
+    });
+
+};
+// API ROUTE to friends ends here
+// *****************************************************************

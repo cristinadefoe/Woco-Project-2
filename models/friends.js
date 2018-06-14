@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
-    var Mentor = sequelize.define("Mentor", {
+    var Friend = sequelize.define("Friend", {
 
-        // Creates a "Mentor" model that matches up with DB
+        // Creates a "Friend" model that matches up with DB
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -28,5 +28,5 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    return Mentor;
+    return Friend;
 };

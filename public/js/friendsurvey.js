@@ -40,12 +40,10 @@ $(document).ready(function () {
             var currentURL = window.location.origin;
 
             // data = response.json from apiRoutes.js
-            $.post(currentURL + "/api/mentors", newMentor, function (data) {
-                $("#mentorName").text(data.sameName);
-                $("#mentorEmail").text(data.sameEmail);
-                $("#mentorImage").attr("src", data.samePicture);
-            }).then(function (data) {
-                console.log(data);
+            $.post(currentURL + "/api/friends", newFriend, function (data) {
+                $("#friendName").text(data.sameName);
+                $("#friendEmail").text(data.sameEmail);
+                $("#friendImage").attr("src", data.samePicture);
             });
 
             $('.modal').modal();
