@@ -8,6 +8,16 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 
+  // Friends's homepage
+  app.get("/friends-home", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/friends-home.html"));
+  });
+
+  // Friend's survey
+  app.get("/friends-survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/friends-survey.html"));
+  });
+
   // Mentor's homepage
   app.get("/mentors-home", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/mentors-home.html"));
@@ -18,14 +28,9 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/mentors-survey.html"));
   });
 
-  // Friends's homepage
-  app.get("/friends-home", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/friends-home.html"));
-  });
-
-  // Friend's survey
-  app.get("/friends-survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/friends-survey.html"));
+  // Networking
+  app.get("/mentors-survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/networking.html"));
   });
 
   // Dating survey
@@ -41,6 +46,12 @@ module.exports = function (app) {
   });
   app.get("/search", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/search.html"));
+  });
+
+  // Shop
+
+  app.get("/shop", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/shop.html"));
   });
 
 };

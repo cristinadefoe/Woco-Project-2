@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS ratings_db;
-CREATE DATABASE ratings_db;

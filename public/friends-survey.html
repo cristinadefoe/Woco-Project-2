@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,106 +11,93 @@
     <title> Friends's Survey</title>
 
     <!-- Bootstrap core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom fonts for this template -->
-<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-<!-- Custom styles for this template -->
-<link href="css/agency.min.css" rel="stylesheet">
-<link href="css/agency.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">WoCO</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-            </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
 
+            <!-- About nav -->
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#about">About US</a>
+                        <a class="dropdown-item" href="#offer">What We Offer</a>
+                        <a class="dropdown-item" href="#founders">The Founders</a>
+                        <a class="dropdown-item" href="#contact">Contact US</a>
+                    </div>
+                </div>
+            </li>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
+            <!-- Friends' nav -->
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Friends</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">Home</a>
+                        <a class="dropdown-item" href="#featured-friends">Featured Friends</a>
+                        <a class="dropdown-item" href="friends-survey.html">Survey</a>
+                    </div>
+                </div>
+            </li>
 
-                    <!-- About nav -->
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#about">About US</a>
-                                <a class="dropdown-item" href="#offer">What We Offer</a>
-                                <a class="dropdown-item" href="#team">The Founders</a>
-                                <a class="dropdown-item" href="#contact">Contact US</a>
-                            </div>
-                        </div>
-                    </li>
+            <!-- Mentors' nav -->
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Mentors</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="mentors-survey.html">Find a Mentor</a>
+                        <a class="dropdown-item" href="networking.html">Networking</a>
+                        <a class="dropdown-item" href="#featured">Featured Mentors</a>
+                    </div>
+                </div>
+            </li>
 
-                    <!-- Friends' nav -->
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Friends</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Home</a>
-                                <a class="dropdown-item" href="#">Survey</a>
-                                <a class="dropdown-item" href="#">Events</a>
-                            </div>
-                        </div>
-                    </li>
+            <!-- Dating nav -->
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dating</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#search-date">Survey</a>
+                        <a class="dropdown-item" href="rating.html">Rate Your Date</a>
+                        <a class="dropdown-item" href="search.html">Search Results</a>
+                    </div>
+                </div>
+            </li>
 
-                    <!-- Mentors' nav -->
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Mentors</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#survey">Find a Mentor</a>
-                                <a class="dropdown-item" href="#featuredmentors">Featured Mentors</a>
-                                <a class="dropdown-item" href="#">Networking</a>
-                                <a class="dropdown-item" href="#">Events</a>
-                            </div>
-                        </div>
-                    </li>
+            <!-- Blog nav -->
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
+            </li>
 
-                    <!-- Dating nav -->
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dating</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Home</a>
-                                <a class="dropdown-item" href="#">Survey</a>
-                                <a class="dropdown-item" href="#">Rate Your Date</a>
-                                <a class="dropdown-item" href="#">Search Results</a>
-                            </div>
-                        </div>
-                    </li>
+            <!-- Shop nav -->
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="shop.html">Shop</a>
+            </li>
 
-                    <!-- Blog nav -->
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#">Blog</a>
-                    </li>
+            <!-- Login nav -->
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+            </li>
+        </ul>
+    </div>
 
-                    <!-- Shop nav -->
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#">Shop</a>
-                    </li>
-
-                    <!-- Login nav -->
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
+    </div>
     </nav>
 
     <!-- Header -->

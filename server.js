@@ -34,9 +34,6 @@ app.use(passport.session());
 // Require api-routes files
 require("./routes/api-routes.js")(app);
 
-// Require api-routes files
-require("./routes/api-mentor.js")(app);
-
 // Require html-routes file to server
 require('./routes/main-html-routes.js')(app);
 

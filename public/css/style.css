@@ -3,8 +3,6 @@ form.login {
   margin-top: 50px;
 }
 
-/* @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css); */
-
 .pic {
   height: 200px;
 }
@@ -38,7 +36,7 @@ form.login {
   height:25px;
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+/***** Highlight Stars on Hover *****/
 
 .rating:not(:checked) > label:hover, /* hover current star */
 .rating:not(:checked) > label:hover ~ label {
