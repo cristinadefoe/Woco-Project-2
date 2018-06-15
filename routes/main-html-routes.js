@@ -3,26 +3,44 @@ var path = require("path");
 
 module.exports = function (app) {
 
-  app.get('/about', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/about.html'));
+  // Homepage - About page
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 
-  app.get('/mentors-home', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/mentors-home.html'));
+  // Mentor's homepage
+  app.get("/mentors-home", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/mentors-home.html"));
   });
 
-
-  app.get('/mentors-survey', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/mentors-survey.html'));
+  // Mentor's survey
+  app.get("/mentors-survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/mentors-survey.html"));
   });
 
-  app.get('/mentors-view', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/mentors-view.html'));
+  // Friends's homepage
+  app.get("/friends-home", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/friends-home.html"));
   });
 
-  // Default, catch-all route that leads to`home.html` which displays the home page. 
-  app.use("/", function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/about.html'));
+  // Friend's survey
+  app.get("/friends-survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/friends-survey.html"));
+  });
+
+  // Dating survey
+  app.get("/survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
+  });
+
+  // Rate your date
+  app.get("/rating", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/rating.html"));
+
+    // Dating search
+  });
+  app.get("/search", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
 };

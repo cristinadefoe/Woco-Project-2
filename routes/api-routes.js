@@ -4,6 +4,10 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var mentorsData = require('../data/mentors.js');
+var friendsData = require('../data/friends.js');
+var friendsArray = require('../data/search.js');
+var path = require('path');
 
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -55,17 +59,110 @@ module.exports = function (app) {
         }
     });
 
-};
-// API ROUTE to Sequelize Passport.js ends here
-// *****************************************************************
+    // Dating API routes
+    // *****************************************************************
+    // display table data in json format
+    app.get('/api/search', function (req, res) {
+        res.json(friendsArray);
 
-// API ROUTE to mentors 
-// *****************************************************************
-var mentorsData = require('../data/mentors.js');
-var path = require('path');
-var db = require("../models");
-module.exports = function (app) {
+    });
 
+    app.post('/api/search', function (req, res) {
+        var userInput = req.body;
+        console.log(userInput)
+        var dateMatch = {
+            singleName: req.body.singleName,
+            singlePhoto: req.body.singlePhoto,
+            singleEmail: req.body.singleEmail,
+            singleScores: req.body.singleScores.join(""),
+        }
+        // var match;
+        //===========================================================================
+
+        db.Dates.findAll({})
+            .then(data => {
+                for (var i = 0; i < data.length; i++) {
+                    console.log(`======================= date name: ${data[i].singleName}`)
+                    console.log("userInput: " + userInput);
+                    var match = data[i]
+                    // do I need this?
+                    var diff = Math.abs(userInput.singleScores - match.singleScores)
+                    console.log("Diff: " + diff);
+                    if (diff < dateMatch.singleScores) {
+                        match.singleName = data[i].singleName;
+                        match.singlePhoto = data[i].singlePhoto;
+                        match.singleEmail = data[i].singleEmail;
+                        match.singleScores = diff;
+                    }
+                }
+                console.log("working");
+                console.log(dateMatch);
+                console.log(match);
+                res.json(match)
+                // loop over the data and compare the scores in data with the userInput score
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+        //=============================================================================
+        var scoresString = req.body.singleScores.join("");
+        console.log("string: " + scoresString)
+        db.Dates.create({
+            singleName: req.body.singleName,
+            singlePhoto: req.body.singlePhoto,
+            singleEmail: req.body.singleEmail,
+            singleScores: scoresString,
+
+        })
+            .then(function (dbPost) {
+                console.log(dbPost);
+                // res.json()
+                // res.redirect("/search");
+                //  res.json(dbPost); 
+            })
+            .catch(function (err) {
+
+                console.log(err);
+            })
+
+        friendsArray.push(userInput);
+    });
+
+    app.post("/api/clear", function () {
+
+        // Empty out the arrays of data
+        friendsArray = [];
+
+        console.log(friendsArray);
+    });
+
+    // POST route for saving a new post
+    app.post("/api/rating", function (req, res) {
+        console.log(req.body);
+        db.Post.create({
+            photo: req.body.photo,
+            name: req.body.name,
+            age: req.body.age,
+            location: req.body.location,
+            paid: req.body.paid,
+            initiation: req.body.initiation,
+            appearance: req.body.appearance,
+            conversation: req.body.conversation,
+            manners: req.body.manners,
+            attraction: req.body.attraction,
+            smoochable: req.body.smoochable,
+            interaction: req.body.interaction,
+            date: req.body.date,
+            impression: req.body.impression,
+        })
+            .then(function (dbPost) {
+                res.json(dbPost);
+            });
+    });
+
+    // Mentors API
+    // *****************************************************************
     app.get('/api/mentors', function (req, res) {
 
         // Display mentors data in json format
@@ -73,18 +170,26 @@ module.exports = function (app) {
     });
 
     app.post('/api/mentors', function (req, res) {
+
         var userInput = req.body;
         console.log(userInput)
         var mentorMatch = {
-            name: "",
-            photo: "",
-            email: "",
-            mentorDifference: 1000
+            // name: "",
+            // photo: "",
+            // email: "",
+            // mentorDifference: 1000
+
+            name: req.body.name,
+            photo: req.body.photo,
+            email: req.body.email,
+            scores: req.body.scores.join(""),
         }
 
         db.Mentor.findAll({})
             .then(data => {
+                console.log(data);
                 for (var i = 0; i < data.length; i++) {
+                    // Sarah suspects there's a problem in here somewhere...
                     console.log(`mentor name: ${data[i].name}`)
                     var mentor = data[i]
                     var diff = Math.abs(userInput.scores - mentor.scores)
@@ -111,76 +216,56 @@ module.exports = function (app) {
             })
             .catch(err => console.log(err))
 
+        // Friends API
+        // *****************************************************************
+        app.get('/api/friends', function (req, res) {
 
+            // Display friends data in json format
+            res.json(friendsData);
+        });
 
-        // Sending response back to mentors-survey.html
+        app.post('/api/friends', function (req, res) {
+            var userInput = req.body;
+            console.log(userInput)
+            var friendMatch = {
+                name: "",
+                photo: "",
+                email: "",
+                friendDifference: 1000
+            }
 
-
-        // res.json({ sameName: sameName, sameEmail: sameEmail, samePicture: samePicture });
-    });
-
-};
-// API ROUTE to mentors ends here
-// *****************************************************************
-
-// API ROUTE to friends
-// *****************************************************************
-var friendsData = require('../data/friends.js');
-var path = require('path');
-var db = require("../models");
-module.exports = function (app) {
-
-    app.get('/api/friends', function (req, res) {
-
-        // Display friends data in json format
-        res.json(friendsData);
-    });
-
-    app.post('/api/friends', function (req, res) {
-        var userInput = req.body;
-        console.log(userInput)
-        var friendMatch = {
-            name: "",
-            photo: "",
-            email: "",
-            friendDifference: 1000
-        }
-
-        db.Friend.findAll({})
-            .then(data => {
-                for (var i = 0; i < data.length; i++) {
-                    console.log(`friend name: ${data[i].name}`)
-                    var mentor = data[i]
-                    var diff = Math.abs(userInput.scores - mentor.scores)
-                    if (diff < friendMatch.friendDifference) {
-                        friendMatch.name = friend.name;
-                        friendMatch.photo = friend.photo;
-                        friendMatch.email = friend.email;
-                        friendMatch.friendDifference = diff;
+            db.Friend.findAll({})
+                .then(data => {
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(`friend name: ${data[i].name}`)
+                        var mentor = data[i]
+                        var diff = Math.abs(userInput.scores - mentor.scores)
+                        if (diff < friendMatch.friendDifference) {
+                            friendMatch.name = friend.name;
+                            friendMatch.photo = friend.photo;
+                            friendMatch.email = friend.email;
+                            friendMatch.friendDifference = diff;
+                        }
                     }
-                }
 
-                res.json(friendMatch)
-                // Loop over the data and compare the scores in data with the userInput score
-            })
-            .catch(err => {
-                console.log(err)
-            })
+                    res.json(friendMatch)
+                    // Loop over the data and compare the scores in data with the userInput score
+                })
+                .catch(err => {
+                    console.log(err)
+                })
 
-        // Add new user
-        mentorsData.push(userInput);
-        db.Mentor.create(userInput)
-            .then(data => {
-                console.log("from .then", data.dataValues.scores)
-            })
-            .catch(err => console.log(err))
-        // Sending object sameName and samePicture to backend
-        // Sending response back to mentors-survey.html
+            // Add new user
+            mentorsData.push(userInput);
+            db.Mentor.create(userInput)
+                .then(data => {
+                    console.log("from .then", data.dataValues.scores)
+                })
+                .catch(err => console.log(err))
+            // Sending object sameName and samePicture to backend
+            // Sending response back to mentors-survey.html
 
-
-        // res.json({ sameName: sameName, sameEmail: sameEmail, samePicture: samePicture });
-    });
-
-};
-// API ROUTE to friends ends here
-// *****************************************************************
+            // res.json({ sameName: sameName, sameEmail: sameEmail, samePicture: samePicture });
+        });
+    })
+}

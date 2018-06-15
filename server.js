@@ -18,6 +18,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+// Check if server is running when press node.js
+app.use(bodyParser.text({ type: "text/html" }));
+app.use(bodyParser.json({ type: "application/vnd.custom-type" }));
+
 // Serve static files and assign to public folder so it's available to all documents
 app.use(express.static('public'));
 

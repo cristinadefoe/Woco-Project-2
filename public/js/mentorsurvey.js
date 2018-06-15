@@ -29,11 +29,11 @@ $(document).ready(function () {
                     $('#question3').val(),
                     $('#question4').val(),
                     $('#question5').val(),
-                    $('#question6').val(),
-                    $('#question7').val(),
-                    $('#question8').val(),
-                    $('#question9').val(),
-                    $('#question10').val(),
+                    // $('#question6').val(),
+                    // $('#question7').val(),
+                    // $('#question8').val(),
+                    // $('#question9').val(),
+                    // $('#question10').val(),
                 ]
             };
 
@@ -57,11 +57,11 @@ $(document).ready(function () {
             $('#question3').val("");
             $('#question4').val("");
             $('#question5').val("");
-            $('#question6').val("");
-            $('#question7').val("");
-            $('#question8').val("");
-            $('#question9').val("");
-            $('#question10').val("");
+            // $('#question6').val("");
+            // $('#question7').val("");
+            // $('#question8').val("");
+            // $('#question9').val("");
+            // $('#question10').val("");
 
         } else {
 
