@@ -21,7 +21,7 @@ $(document).ready(function () {
             // Add new friend
             var newMentor = {
                 name: $('#name').val().trim(),
-                email: $('#email').val().trim(),
+                // email: $('#email').val().trim(),
                 photo: $('#photo').val().trim(),
                 scores: [
                     $('#question1').val(),
@@ -29,11 +29,11 @@ $(document).ready(function () {
                     $('#question3').val(),
                     $('#question4').val(),
                     $('#question5').val(),
-                    // $('#question6').val(),
-                    // $('#question7').val(),
-                    // $('#question8').val(),
-                    // $('#question9').val(),
-                    // $('#question10').val(),
+                    $('#question6').val(),
+                    $('#question7').val(),
+                    $('#question8').val(),
+                    $('#question9').val(),
+                    $('#question10').val(),
                 ]
             };
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
             // data = response.json from apiRoutes.js
             $.post(currentURL + "/api/mentors", newMentor, function (data) {
                 $("#mentorName").text(data.sameName);
-                $("#mentorEmail").text(data.sameEmail);
+                // $("#mentorEmail").text(data.sameEmail);
                 $("#mentorImage").attr("src", data.samePicture);
             }).then(function (data) {
                 console.log(data);
@@ -50,18 +50,18 @@ $(document).ready(function () {
 
             $('.modal').modal();
             $('#name').val("");
-            $('#email').val("");
+            // $('#email').val("");
             $('#photo').val("");
             $('#question1').val("");
             $('#question2').val("");
             $('#question3').val("");
             $('#question4').val("");
             $('#question5').val("");
-            // $('#question6').val("");
-            // $('#question7').val("");
-            // $('#question8').val("");
-            // $('#question9').val("");
-            // $('#question10').val("");
+            $('#question6').val("");
+            $('#question7').val("");
+            $('#question8').val("");
+            $('#question9').val("");
+            $('#question10').val("");
 
         } else {
 
@@ -70,7 +70,7 @@ $(document).ready(function () {
 
         // Empty each input box by replacing the value with an empty string
         $("#name").val("");
-        $("#email").val("");
+        // $("#email").val("");
         $("#photo").val("");
         $("#score").val("");
 

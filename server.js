@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/passport');
+var path = require('path');
 
 // Port will work on local host 8080
 var PORT = process.env.PORT || 8080;
@@ -18,9 +19,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-// Check if server is running when press node.js
-app.use(bodyParser.text({ type: "text/html" }));
-app.use(bodyParser.json({ type: "application/vnd.custom-type" }));
+// // Check if server is running when press node.js
+// app.use(bodyParser.text({ type: "text/html" }));
+// app.use(bodyParser.json({ type: "application/vnd.custom-type" }));
 
 // Serve static files and assign to public folder so it's available to all documents
 app.use(express.static('public'));
@@ -32,6 +33,9 @@ app.use(passport.session());
 
 // Require api-routes files
 require("./routes/api-routes.js")(app);
+
+// Require api-routes files
+require("./routes/api-mentor.js")(app);
 
 // Require html-routes file to server
 require('./routes/main-html-routes.js')(app);
