@@ -3,7 +3,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/passport');
-var path = require('path');
 
 // Port will work on local host 8080
 var PORT = process.env.PORT || 8080;
@@ -31,10 +30,13 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Require api-routes files
+// Routes
+require("./routes/dating-api-routes.js")(app);
+require("./routes/mentor-api-routes.js")(app);
+
+// Require api-routes file to server (passport authentication)
 require("./routes/api-routes.js")(app);
 
-// Require html-routes file to server
 require('./routes/main-html-routes.js')(app);
 
 // Require html-routes file to server (passport authentication)

@@ -1,35 +1,20 @@
-// HTML ROUTE to Home page
+// Dependencies
 var path = require("path");
 
 module.exports = function (app) {
 
-  // Homepage - About page
+  // About page - Home
   app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 
-  // Friends's homepage
-  app.get("/friends-home", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/friends-home.html"));
-  });
-
-  // Friend's survey
-  app.get("/friends-survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/friends-survey.html"));
-  });
-
-  // Mentor's homepage
-  app.get("/mentors-home", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/mentors-home.html"));
-  });
-
-  // Mentor's survey
-  app.get("/mentors-survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/mentors-survey.html"));
+  // Mentor's
+  app.get("/mentors", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/mentors.html"));
   });
 
   // Networking
-  app.get("/mentors-survey", function (req, res) {
+  app.get("/networking", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/networking.html"));
   });
 
@@ -41,17 +26,11 @@ module.exports = function (app) {
   // Rate your date
   app.get("/rating", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/rating.html"));
-
-    // Dating search
   });
+
+  // Dating search
   app.get("/search", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/search.html"));
-  });
-
-  // Shop
-
-  app.get("/shop", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/shop.html"));
   });
 
 };
