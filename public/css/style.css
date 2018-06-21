@@ -1,3 +1,17 @@
+#mail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mentorImage {
+  max-width: 90%;
+}
+
+#friendImage {
+  max-width: 90%;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;

@@ -13,6 +13,13 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -23,6 +30,17 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
     <link href="css/agency.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -109,7 +127,7 @@
                 <div class="intro-heading text-uppercase">Where women can meet new friends</div>
 
                 <!-- Button to take user to survey page -->
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#survey">Take Friend Survey</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#survey">Take survey to meet a friend</a>
             </div>
         </div>
     </header>
@@ -237,7 +255,7 @@
                     <strong>Question 1:</strong>
                 </h3>
                 <h4>Do you think meeting new friends will help you grow as a person?</h4>
-                <select data-placeholder="" class="chosen-select" id="question1">
+                <select data-placeholder="" class="chosen-select form-control" id="question1">
                     <option value=""></option>
                     <option value="1">1 Strongly Disagree</option>
                     <option value="2">2 Disagree</option>
@@ -251,7 +269,7 @@
                     <strong>Question 2:</strong>
                 </h3>
                 <h4>Is happiness more important than money?</h4>
-                <select data-placeholder="" class="chosen-select" id="question2">
+                <select data-placeholder="" class="chosen-select form-control" id="question2">
                     <option value=""></option>
                     <option value="1">1 Strongly Disagree</option>
                     <option value="2">2 Disagree</option>
@@ -265,7 +283,7 @@
                     <strong>Question 3:</strong>
                 </h3>
                 <h4>Do you value meeting new friends with shared interests and hobbies?</h4>
-                <select data-placeholder="" class="chosen-select" id="question3">
+                <select data-placeholder="" class="chosen-select form-control" id="question3">
                     <option value=""></option>
                     <option value="1">1 Strongly Disagree</option>
                     <option value="2">2 Disagree</option>
@@ -279,7 +297,7 @@
                     <strong>Question 4</strong>
                 </h3>
                 <h4>Does meeting new friends inspire you to be a better person?</h4>
-                <select data-placeholder="" class="chosen-select" id="question4">
+                <select data-placeholder="" class="chosen-select form-control" id="question4">
                     <option value=""></option>
                     <option value="1">1 Strongly Disagree</option>
                     <option value="2">2 Disagree</option>
@@ -293,7 +311,7 @@
                     <strong>Question 5</strong>
                 </h3>
                 <h4>Do you support other women's views even if you don't agree?</h4>
-                <select data-placeholder="" class="chosen-select" id="question5">
+                <select data-placeholder="" class="chosen-select form-control" id="question5">
                     <option value=""></option>
                     <option value="1">1 Strongly Disagree</option>
                     <option value="2">2 Disagree</option>
@@ -308,7 +326,7 @@
         <!-- Button to take user to their matched friend -->
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
             <i class="fa fa-check-circle" aria-hidden="true">
-            </i>Find my friend</button>
+            </i>Find my friend!</button>
         <hr>
 
         <!-- Modal -->
@@ -328,49 +346,38 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Javascript start -->
-
         <script type="text/javascript">
 
             $(document).ready(function () {
                 $("#submit").on("click", function () {
+
                     // Check if form is valid
                     function validateForm() {
-                        var formValid = true;
-                        $('.validate').each(function () {
-                            if ($(this).val() === '') {
-                                formValid = false;
-                            }
+                        var isValid = true;
+                        $('.form-control').each(function () {
+                            if ($(this).val() === '')
+                                isValid = false;
                         });
-                        $('.browser-default').each(function () {
-                            if ($(this).val() === "") {
-                                formValid = false;
-                            }
-                        });
-                        return formValid;
+
+                        return isValid;
                     }
 
                     // Check if form is done
                     if (validateForm() == true) {
-                        // Add new mentor
-                        // console.log("test" + typeof $('#question2').val())
-                        var scores = parseInt($('#question1').val()) +
+
+                        // Lines of code below is for sequelize db
+                        var scores =
+                            parseInt($('#question1').val()) +
                             parseInt($('#question2').val()) +
                             parseInt($('#question3').val()) +
                             parseInt($('#question4').val()) +
-                            parseInt($('#question5').val()) +
-                            parseInt($('#question6').val()) +
-                            parseInt($('#question7').val()) +
-                            parseInt($('#question8').val()) +
-                            parseInt($('#question9').val()) +
-                            parseInt($('#question10').val());
-                        console.log(scores)
+                            parseInt($('#question5').val());
 
                         var newFriend = {
                             name: $('#name').val().trim(),
@@ -382,11 +389,12 @@
                         var currentURL = window.location.origin;
 
                         // data = response.json from apiRoutes.js
-                        $.post("/api/mentors", newFriend, function (data) {
+                        $.post("/api/friends", newFriend, function (data) {
                             console.log(data)
                             $("#friendName").text(data.name);
                             $("#friendEmail").text(data.email);
                             $("#friendImage").attr("src", data.photo);
+                            $("#exampleModal").modal("toggle")
                         });
 
                     } else {

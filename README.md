@@ -1,23 +1,6 @@
 # Project-2-WOCO
 
-## Getting Started
-
-### NPM Installations
-
-Run the following command lines in the terminal:
-
-- `npm install express`
-- `npm install body-parse`
-- `npm install path`
-- `sequelize init:models & sequelize init:config`
-
-
-* To check if the server is listening, navigate to the root of the project. In the terminal command line, run `node server.js`. This will display a message "Listening on PORT: 8080.
-
-
-* Then open your browser and type "localhost: 8080". This will display the home page and allow you to navigate through the site. 
-
-* Alternatively, you can go directly to site by pasting the following link in your browser (hosted by Heroku): https://arcane-lake-35500.herokuapp.com.
+Our application allows the user to choose from several surveys: friendship, mentorship and to find a date. After the user completes the survey it outputs the name of the person and their image of their best match. Also, it offers resources and links to networking. In the dating site, the user is able to rate their date and provide additional information about how their date was for other women to view.
 
 ## Built With
 
@@ -31,11 +14,12 @@ Run the following command lines in the terminal:
 * JSON (http://www.json.org) - Data format 
 * Heroku (https://www.heroku.com) - Hosting service used to run application
 * Express (https://expressjs.com) - Used to handle routing
+* Sequelize with ORM - Database 
 
 ## Authors
 
-* **Amy Austin(Insert GH link)   **Cristina Defoe** - (https://github.com/cristinadefoe)  **Nick Tsoukas(Insert GH link)
+* **Amy Austin,   **Cristina Defoe** - (https://github.com/cristinadefoe),  **Nick Tsoukas
 
 ## Acknowledgments
 
-* Thanks to anyone's code that was used as inspiration.# Woco-Project-2
+* Thanks to anyone's code that was used as inspiration.

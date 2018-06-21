@@ -33,6 +33,7 @@ app.use(passport.session());
 // Routes
 require("./routes/dating-api-routes.js")(app);
 require("./routes/mentor-api-routes.js")(app);
+require("./routes/friend-api-routes.js")(app);
 
 // Require api-routes file to server (passport authentication)
 require("./routes/api-routes.js")(app);

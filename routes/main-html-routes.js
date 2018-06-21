@@ -18,6 +18,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/networking.html"));
   });
 
+  // Friends's
+  app.get("/friends", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/friends.html"));
+  });
+
   // Dating survey
   app.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
