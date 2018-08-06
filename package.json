@@ -1,8 +1,25 @@
 {
-  "name": "project-2-woco",
+  "name": "woco-project-2",
   "version": "1.0.0",
-  "description": "WOCO is a resource site for women in tech interested in friendship, mentor and dating.",
+  "description": "",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristinadefoe/Woco-Project-2.git"
+  },
+  "author": "Amy Austin, Cristina Defoe, Nick Tsoukas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristinadefoe/Woco-Project-2/issues"
+  },
+  "engines": {
+    "node": "10.1.0"
+  },
+  "homepage": "https://github.com/cristinadefoe/Woco-Project-2#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
@@ -13,20 +30,5 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "sequelize": "^4.37.10"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cristinadefoe/Project-2-WOCO.git"
-  },
-  "author": "Amy Austin, Cristina Defoe, Nick Tsoukas",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cristinadefoe/Project-2-WOCO/issues"
-  },
-  "homepage": "https://github.com/cristinadefoe/Project-2-WOCO#readme"
+  }
 }

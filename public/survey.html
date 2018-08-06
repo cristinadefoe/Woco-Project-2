@@ -2,12 +2,8 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title> Dating Survey</title>
 
     <!-- Bootstrap core CSS -->
@@ -23,111 +19,234 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
     <link href="css/agency.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">WoCO</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-            </button>
-
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
-
                     <!-- About nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#about">About US</a>
-                                <a class="dropdown-item" href="#offer">What We Offer</a>
-                                <a class="dropdown-item" href="#founders">The Founders</a>
-                                <a class="dropdown-item" href="#contact">Contact US</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link" aria-haspopup="true" aria-expanded="false" href="about.html">About</a>
                     </li>
-
                     <!-- Friends' nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Friends</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">Home</a>
-                                <a class="dropdown-item" href="#featured-friends">Featured Friends</a>
-                                <a class="dropdown-item" href="#survey">Survey</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link " aria-haspopup="true" aria-expanded="false" href="friends.html">Friends</a>
                     </li>
-
                     <!-- Mentors' nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Mentors</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">Home</a>
-                                <a class="dropdown-item" href="#featured">Featured Mentors</a>
-                                <a class="dropdown-item" href="#survey">Survey</a>
-                                <a class="dropdown-item" href="networking.html">Networking</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link " aria-haspopup="true" aria-expanded="false" href="mentors.html">Mentors</a>
                     </li>
-
                     <!-- Dating nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dating</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#survey">Survey</a>
-                                <a class="dropdown-item" href="rating.html">Rate Your Date</a>
-                                <a class="dropdown-item" href="search.html">Search Results</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link" aria-haspopup="true" aria-expanded="false" href="survey.html">Dating</a>
                     </li>
-
-                    <!-- Login nav -->
+                    <!-- Rate your date nav -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+                        <a class="nav-item nav-link" aria-haspopup="true" aria-expanded="false" href="rating.html">Rate Your Date</a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
     <!-- Header -->
-
-    <header class="masthead">
+    <header class="masthead" id="header-dating">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">"CURRENT RELATIONSHIP STATUS: Sleeping diagonally across the queen size bed."</div>
-                <div class="intro-heading text-uppercase">Find a Date</div>
-
-                <!-- Button to take user to survey page -->
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#survey">Let's Go!</a>
+                <div class="intro-lead-in text-dark">WoCO Dating</div>
+                <div class="intro-heading text-uppercase text-dark">Find a Date</div>
+                <a class="btn btn-dark btn-xl text-uppercase js-scroll-trigger" href="#search-date">See Featured Dates</a>
             </div>
         </div>
     </header>
 
+    <!-- Featured Dates -->
+    <section class="bg-info" id="search-date">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Our Featured Dates</h2>
+                    <h3 class="section-subheading">These young bachelors want to get to know you!
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="images/brendan.jpg" alt="">
+                        <h4>Brendan Smith</h4>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="images/charlie.jpg" alt="">
+                        <h4>Charlie Brown</h4>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="images/tom.jpg" alt="">
+                        <h4>Tom Johnson</h4>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="large">It has been said that dating in Colorado can be kinda ‘ROCKY’ until now. On our site, you can take a quick
+                    survey and get matched with a date who shares similar interests. Then you can go out on the date and
+                    rate your date after it is over.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="images/dontel.jpg" alt="">
+                    <h4>Dontel Smith</h4>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="https://images.unsplash.com/photo-1475403614135-5f1aa0eb5015?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aa32268d819cd488975b3d92e88ab1bc&auto=format&fit=crop&w=800&q=60"
+                        alt="">
+                    <h4>Drew Anderson</h4>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="images/ian.jpg" alt="">
+                    <h4>Iam Williams</h4>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        <div class="text-center">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#survey">Take the survey to find a date</a>
+        </div>
+    </section>
+
     <!-- Dating Survey-->
     <section id="survey">
-        <div class="container">
+        <div class="container text-center">
             <div class="row">
                 <div class="col-lg-12 text-center">
                 </div>
             </div>
-
             <div class="col-lg-12 mx-auto">
                 <h1 class="text-uppercase">
-                    <strong>Find a Date Survey Questions</strong>
+                    <strong>Find A Date Survey</strong>
                 </h1>
                 <hr>
-                <h3 class="text-center">Tell me about yourself!</h3>
+                <h5 class="text-center">Tell me about yourself.</h5>
                 <h4>Name:</h4>
                 <input type="text" name="" id="name" class="form-control" required>
                 <br>
@@ -141,35 +260,26 @@
                 <br>
                 <hr>
             </div>
-
             <div class="container">
-
                 <h2>Survey Questions</h2>
                 <hr>
-
-                <h3>
+                <h5>
                     <strong>ABOUT YOU</strong>
-                </h3>
+                </h5>
                 <h4>Name (Required)</h4>
                 <input type="text" id="name" class="form-control" required="">
-
                 <h4>Link to Photo Image (Required)</h4>
                 <input type="text" id="photo" class="form-control" required="">
-
                 <h4>Email Address:</h4>
-
                 <input type="text" email="" id="email" class="form-control" required>
-
                 <hr>
-
-                <h3>
+                <h5>
                     <strong>Question 1</strong>
-                </h3>
+                </h5>
                 <h4>You are dating just for fun and nothing serious.</h4>
-
                 <form>
                     <div class="form-group">
-                        <label for="exampleSelect1">Select an Number</label>
+                        <!-- <label for="exampleSelect1">Select an Number</label> -->
                         <select class="form-control" id="q1">
                             <option value=1>1 Strongly Disagree</option>
                             <option value=2>2 Disagree</option>
@@ -178,14 +288,13 @@
                             <option value=5>5 Strongly Agree</option>
                         </select>
                     </div>
-
-                    <h3>
+                    <h5>
                         <strong>Question 2</strong>
-                    </h3>
+                    </h5>
                     <h4>You are looking for someone to settle down with and hope to one day have a family.</h4>
                     <form>
                         <div class="form-group">
-                            <label for="exampleSelect1">Select an Number</label>
+                            <!-- <label for="exampleSelect1">Select an Number</label> -->
                             <select class="form-control" id="q2">
                                 <option value=1>1 Strongly Disagree</option>
                                 <option value=2>2 Disagree</option>
@@ -194,14 +303,13 @@
                                 <option value=5>5 Strongly Agree</option>
                             </select>
                         </div>
-
-                        <h3>
+                        <h5>
                             <strong>Question 3</strong>
-                        </h3>
+                        </h5>
                         <h4>You like to keep active, are involved in outdoor sports, festivities, or like live music.</h4>
                         <form>
                             <div class="form-group">
-                                <label for="exampleSelect1">Select an Number</label>
+                                <!-- <label for="exampleSelect1">Select an Number</label> -->
                                 <select class="form-control" id="q3">
                                     <option value=1>1 Strongly Disagree</option>
                                     <option value=2>2 Disagree</option>
@@ -210,14 +318,13 @@
                                     <option value=5>5 Strongly Agree</option>
                                 </select>
                             </div>
-
-                            <h3>
+                            <h5>
                                 <strong>Question 4</strong>
-                            </h3>
+                            </h5>
                             <h4>You would rather be someplace quiet, chill at home, or watch something interesting on TV.</h4>
                             <form>
                                 <div class="form-group">
-                                    <label for="exampleSelect1">Select an Number</label>
+                                    <!-- <label for="exampleSelect1">Select an Number</label> -->
                                     <select class="form-control" id="q4">
                                         <option value=1>1 Strongly Disagree</option>
                                         <option value=2>2 Disagree</option>
@@ -226,14 +333,13 @@
                                         <option value=5>5 Strongly Agree</option>
                                     </select>
                                 </div>
-
-                                <h3>
+                                <h5>
                                     <strong>Question 5</strong>
-                                </h3>
+                                </h5>
                                 <h4>You are highly motivated and driven at your job.</h4>
                                 <form>
                                     <div class="form-group">
-                                        <label for="exampleSelect1">Select an Number</label>
+                                        <!-- <label for="exampleSelect1">Select an Number</label> -->
                                         <select class="form-control" id="q5">
                                             <option value=1>1 Strongly Disagree</option>
                                             <option value=2>2 Disagree</option>
@@ -242,14 +348,13 @@
                                             <option value=5>5 Strongly Agree</option>
                                         </select>
                                     </div>
-
-                                    <h3>
+                                    <h5>
                                         <strong>Question 6</strong>
-                                    </h3>
+                                    </h5>
                                     <h4>You are financially independent and can maintain your lifestyle.</h4>
                                     <form>
                                         <div class="form-group">
-                                            <label for="exampleSelect1">Select an Number</label>
+                                            <!-- <label for="exampleSelect1">Select an Number</label> -->
                                             <select class="form-control" id="q6">
                                                 <option value=1>1 Strongly Disagree</option>
                                                 <option value=2>2 Disagree</option>
@@ -258,14 +363,13 @@
                                                 <option value=5>5 Strongly Agree</option>
                                             </select>
                                         </div>
-
-                                        <h3>
+                                        <h5>
                                             <strong>Question 7</strong>
-                                        </h3>
+                                        </h5>
                                         <h4>You have had many long term relationships in the past.</h4>
                                         <form>
                                             <div class="form-group">
-                                                <label for="exampleSelect1">Select an Number</label>
+                                                <!-- <label for="exampleSelect1">Select an Number</label> -->
                                                 <select class="form-control" id="q7">
                                                     <option value=1>1 Strongly Disagree</option>
                                                     <option value=2>2 Disagree</option>
@@ -274,14 +378,13 @@
                                                     <option value=5>5 Strongly Agree</option>
                                                 </select>
                                             </div>
-
-                                            <h3>
+                                            <h5>
                                                 <strong>Question 8</strong>
-                                            </h3>
+                                            </h5>
                                             <h4>You are spontaneous, like visiting new places, and experiencing new things.</h4>
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="exampleSelect1">Select an Number</label>
+                                                    <!-- <label for="exampleSelect1">Select an Number</label> -->
                                                     <select class="form-control" id="q8">
                                                         <option value=1>1 Strongly Disagree</option>
                                                         <option value=2>2 Disagree</option>
@@ -290,14 +393,13 @@
                                                         <option value=5>5 Strongly Agree</option>
                                                     </select>
                                                 </div>
-
-                                                <h3>
+                                                <h5>
                                                     <strong>Question 9</strong>
-                                                </h3>
+                                                </h5>
                                                 <h4>You are loyal, can be trusted, and never cheated in a relationship.</h4>
                                                 <form>
                                                     <div class="form-group">
-                                                        <label for="exampleSelect1">Select an Number</label>
+                                                        <!-- <label for="exampleSelect1">Select an Number</label> -->
                                                         <select class="form-control" id="q9">
                                                             <option value=1>1 Strongly Disagree</option>
                                                             <option value=2>2 Disagree</option>
@@ -306,14 +408,13 @@
                                                             <option value=5>5 Strongly Agree</option>
                                                         </select>
                                                     </div>
-
-                                                    <h3>
+                                                    <h5>
                                                         <strong>Question 10</strong>
-                                                    </h3>
+                                                    </h5>
                                                     <h4>You have many friends, are outgoing, and are a social drinker.</h4>
                                                     <form>
                                                         <div class="form-group">
-                                                            <label for="exampleSelect1">Select an Number</label>
+                                                            <!-- <label for="exampleSelect1">Select an Number</label> -->
                                                             <select class="form-control" id="q10">
                                                                 <option value=1>1 Strongly Disagree</option>
                                                                 <option value=2>2 Disagree</option>
@@ -322,15 +423,15 @@
                                                                 <option value=5>5 Strongly Agree</option>
                                                             </select>
                                                         </div>
-
+                                                        <!-- Button to take user to their matched friend -->
+                                                        <div class=text-center>
+                                                            <button type="submit" class="btn btn-primary btn-xl" id="submit">
+                                                                <i class="fa fa-check-circle" aria-hidden="true">
+                                                                </i>Find a Date</button>
+                                                        </div>
+                                                    
     </section>
     </div>
-
-    <!-- Button to take user to their matched friend -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-        <i class="fa fa-check-circle" aria-hidden="true">
-        </i>Find a Date</button>
-    <hr>
 
     <!-- Javascript start -->
     <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->

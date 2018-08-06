@@ -2,13 +2,9 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title> Friends's Homepage</title>
+    <title>Friends</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +26,6 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
     <link href="css/agency.css" rel="stylesheet">
-
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Popper.js, then Bootstrap JS -->
@@ -41,113 +36,66 @@
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 </head>
 
 <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">WoCO</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-            </button>
-
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
-
                     <!-- About nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#about">About US</a>
-                                <a class="dropdown-item" href="#offer">What We Offer</a>
-                                <a class="dropdown-item" href="#founders">The Founders</a>
-                                <a class="dropdown-item" href="#contact">Contact US</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link" aria-haspopup="true" aria-expanded="false" href="about.html">About</a>
                     </li>
-
                     <!-- Friends' nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Friends</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">Home</a>
-                                <a class="dropdown-item" href="#featured-friends">Featured Friends</a>
-                                <a class="dropdown-item" href="#survey">Survey</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link " aria-haspopup="true" aria-expanded="false" href="friends.html">Friends</a>
                     </li>
-
                     <!-- Mentors' nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Mentors</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">Home</a>
-                                <a class="dropdown-item" href="#featured">Featured Mentors</a>
-                                <a class="dropdown-item" href="#survey">Survey</a>
-                                <a class="dropdown-item" href="networking.html">Networking</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link " aria-haspopup="true" aria-expanded="false" href="mentors.html">Mentors</a>
                     </li>
-
                     <!-- Dating nav -->
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dating</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#search-date">Survey</a>
-                                <a class="dropdown-item" href="rating.html">Rate Your Date</a>
-                                <a class="dropdown-item" href="search.html">Search Results</a>
-                            </div>
-                        </div>
+                        <a class="nav-item nav-link" aria-haspopup="true" aria-expanded="false" href="survey.html">Dating</a>
                     </li>
-
-                    <!-- Login nav -->
+                    <!-- Rate your date nav -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+                        <a class="nav-item nav-link" aria-haspopup="true" aria-expanded="false" href="rating.html">Rate Your Date</a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="masthead">
+    <header class="masthead" id="header-friends">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">WoCO Social</div>
                 <div class="intro-heading text-uppercase">Where women can meet new friends</div>
-
-                <!-- Button to take user to survey page -->
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#survey">Take survey to meet a friend</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#featured-friends">See Featured Friends</a>
             </div>
         </div>
     </header>
 
     <!-- Featured friends  -->
-
-    <<section class="bg-light" id="featured-friends">
+    <section class="bg-info" id="featured-friends">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Our Featured Friends</h2>
-                    <h3 class="section-subheading text-muted">Connect with these amazing and creative women.</h3>
+                    <h3 class="section-subheading">Connect with these amazing and creative women.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="images/about/amy.jpg" alt="Amy's-Picture">
-                        <h4>Amy Austin</h4>
-                        <p class="text-muted">Mentor</p>
+                        <img class="mx-auto rounded-circle" src="https://images.unsplash.com/photo-1516913840875-366de3e463bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be881d954f17c51a868fa0d2e0a5b707&auto=format&fit=crop&w=800&q=60"
+                            alt="Amy's-Picture">
+                        <h4>Nancy Drew</h4>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
                                 <a href="#">
@@ -171,7 +119,6 @@
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="images/ashley.jpg" alt="">
                         <h4>Ashley Smith</h4>
-                        <p class="text-muted">Mentor</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
                                 <a href="#">
@@ -195,7 +142,6 @@
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="images/kayla.jpg" alt="">
                         <h4>Kayla Jackson</h4>
-                        <p class="text-muted">Mentor</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
                                 <a href="#">
@@ -218,199 +164,194 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">It's the friends we meet along the life's road who help us appreciate the journey.</p>
+                    <p class="large">It's the friends we meet along the life's road who help us appreciate the journey.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#survey-friends">Take the Friend Survey </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Friend Survey-->
+    <section id="survey-friends">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="section-heading text-uppercase">Friendship Survey</h2>
+                </div>
+            </div>
+
+            <div class="col-lg-12 mx-auto">
+                <h1 class="text-uppercase">
+                </h1>
+                <hr>
+                <h3 class="text-center">
+                    <em>Tell me about yourself.</em>
+                </h3>
+                <h4>Name:</h4>
+                <input type="text" name="" id="name" class="form-control" required>
+                <br>
+                <br>
+                <h4>Email Address:</h4>
+                <input type="text" email="" id="email" class="form-control" required>
+                <br>
+                <br>
+                <h4>Link to photo:</h4>
+                <input type="text" name="" id="photo" class="form-control" required>
+                <hr>
+            </div>
+            <h5>
+                Question 1:
+            </h5>
+            <h4>Do you think meeting new friends will help you grow as a person?</h4>
+            <select data-placeholder="" class="chosen-select form-control" id="question1">
+                <option value=""></option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2 Disagree</option>
+                <option value="3">3 No Opinion</option>
+                <option value="4">4 Agree</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+            <hr>
+            <h5>
+                Question 2:
+            </h5>
+            <h4>Is happiness more important than money?</h4>
+            <select data-placeholder="" class="chosen-select form-control" id="question2">
+                <option value=""></option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2 Disagree</option>
+                <option value="3">3 No Opinion</option>
+                <option value="4">4 Agree</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+            <hr>
+
+            <h5>
+                Question 3:
+            </h5>
+            <h4>Do you value meeting new friends with shared interests and hobbies?</h4>
+            <select data-placeholder="" class="chosen-select form-control" id="question3">
+                <option value=""></option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2 Disagree</option>
+                <option value="3">3 No Opinion</option>
+                <option value="4">4 Agree</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+            <hr>
+
+            <h5>
+                Question 4:
+            </h5>
+            <h4>Does meeting new friends inspire you to be a better person?</h4>
+            <select data-placeholder="" class="chosen-select form-control" id="question4">
+                <option value=""></option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2 Disagree</option>
+                <option value="3">3 No Opinion</option>
+                <option value="4">4 Agree</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+            <hr>
+
+            <h5>
+                Question 5:
+            </h5>
+            <h4>Do you support other women's views even if you don't agree?</h4>
+            <select data-placeholder="" class="chosen-select form-control" id="question5">
+                <option value=""></option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2 Disagree</option>
+                <option value="3">3 No Opinion</option>
+                <option value="4">4 Agree</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+            <br>
+            <!-- Button to take user to their matched friend -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-xl " id="submit">
+                    <i class="fa fa-check-circle" aria-hidden="true">
+                    </i>Find my friend!</button>
+            </div>
+    </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade text-center" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalLabel">Found your new friend!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="friendName"></p>
+                    <p id="friendEmail"></p>
+                    <img id="friendImage" src="">
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        </section>
+    </div>
 
-        <!--Friend Survey-->
-        <section id="survey">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Take a brief survey to meet a Friend.</h2>
-                    </div>
-                </div>
+    <!-- Javascript start -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submit").on("click", function () {
+                // Check if form is valid
+                function validateForm() {
+                    var isValid = true;
+                    $('.form-control').each(function () {
+                        if ($(this).val() === '')
+                            isValid = false;
+                    });
+                    return isValid;
+                }
 
-                <div class="col-lg-12 mx-auto">
-                    <h1 class="text-uppercase">
-                    </h1>
-                    <hr>
-                    <h3 class="text-center">Tell me about yourself (ALL fields below are required)!</h3>
-                    <h4>Name:</h4>
-                    <input type="text" name="" id="name" class="form-control" required>
-                    <br>
-                    <br>
-                    <h4>Email Address:</h4>
-                    <input type="text" email="" id="email" class="form-control" required>
-                    <br>
-                    <br>
-                    <h4>Link to photo:</h4>
-                    <input type="text" name="" id="photo" class="form-control" required>
-                    <hr>
-                </div>
+                // Check if form is done
+                if (validateForm() == true) {
 
-                <h3>
-                    <strong>Question 1:</strong>
-                </h3>
-                <h4>Do you think meeting new friends will help you grow as a person?</h4>
-                <select data-placeholder="" class="chosen-select form-control" id="question1">
-                    <option value=""></option>
-                    <option value="1">1 Strongly Disagree</option>
-                    <option value="2">2 Disagree</option>
-                    <option value="3">3 No Opinion</option>
-                    <option value="4">4 Agree</option>
-                    <option value="5">5 Strongly Agree</option>
-                </select>
-                <hr>
+                    // Lines of code below is for sequelize db
+                    var scores =
+                        parseInt($('#question1').val()) +
+                        parseInt($('#question2').val()) +
+                        parseInt($('#question3').val()) +
+                        parseInt($('#question4').val()) +
+                        parseInt($('#question5').val());
 
-                <h3>
-                    <strong>Question 2:</strong>
-                </h3>
-                <h4>Is happiness more important than money?</h4>
-                <select data-placeholder="" class="chosen-select form-control" id="question2">
-                    <option value=""></option>
-                    <option value="1">1 Strongly Disagree</option>
-                    <option value="2">2 Disagree</option>
-                    <option value="3">3 No Opinion</option>
-                    <option value="4">4 Agree</option>
-                    <option value="5">5 Strongly Agree</option>
-                </select>
-                <hr>
+                    var newFriend = {
+                        name: $('#name').val().trim(),
+                        email: $('#email').val().trim(),
+                        photo: $('#photo').val().trim(),
+                        scores: scores
+                    };
 
-                <h3>
-                    <strong>Question 3:</strong>
-                </h3>
-                <h4>Do you value meeting new friends with shared interests and hobbies?</h4>
-                <select data-placeholder="" class="chosen-select form-control" id="question3">
-                    <option value=""></option>
-                    <option value="1">1 Strongly Disagree</option>
-                    <option value="2">2 Disagree</option>
-                    <option value="3">3 No Opinion</option>
-                    <option value="4">4 Agree</option>
-                    <option value="5">5 Strongly Agree</option>
-                </select>
-                <hr>
-
-                <h3>
-                    <strong>Question 4</strong>
-                </h3>
-                <h4>Does meeting new friends inspire you to be a better person?</h4>
-                <select data-placeholder="" class="chosen-select form-control" id="question4">
-                    <option value=""></option>
-                    <option value="1">1 Strongly Disagree</option>
-                    <option value="2">2 Disagree</option>
-                    <option value="3">3 No Opinion</option>
-                    <option value="4">4 Agree</option>
-                    <option value="5">5 Strongly Agree</option>
-                </select>
-                <hr>
-
-                <h3>
-                    <strong>Question 5</strong>
-                </h3>
-                <h4>Do you support other women's views even if you don't agree?</h4>
-                <select data-placeholder="" class="chosen-select form-control" id="question5">
-                    <option value=""></option>
-                    <option value="1">1 Strongly Disagree</option>
-                    <option value="2">2 Disagree</option>
-                    <option value="3">3 No Opinion</option>
-                    <option value="4">4 Agree</option>
-                    <option value="5">5 Strongly Agree</option>
-                </select>
-                <hr>
-        </section>
-        </div>
-
-        <!-- Button to take user to their matched friend -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-            <i class="fa fa-check-circle" aria-hidden="true">
-            </i>Find my friend!</button>
-        <hr>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Found your new friend!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="friendName"></p>
-                        <p id="friendEmail"></p>
-                        <img id="friendImage" src="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Javascript start -->
-        <script type="text/javascript">
-
-            $(document).ready(function () {
-                $("#submit").on("click", function () {
-
-                    // Check if form is valid
-                    function validateForm() {
-                        var isValid = true;
-                        $('.form-control').each(function () {
-                            if ($(this).val() === '')
-                                isValid = false;
-                        });
-
-                        return isValid;
-                    }
-
-                    // Check if form is done
-                    if (validateForm() == true) {
-
-                        // Lines of code below is for sequelize db
-                        var scores =
-                            parseInt($('#question1').val()) +
-                            parseInt($('#question2').val()) +
-                            parseInt($('#question3').val()) +
-                            parseInt($('#question4').val()) +
-                            parseInt($('#question5').val());
-
-                        var newFriend = {
-                            name: $('#name').val().trim(),
-                            email: $('#email').val().trim(),
-                            photo: $('#photo').val().trim(),
-                            scores: scores
-                        };
-
-                        var currentURL = window.location.origin;
-
-                        // data = response.json from apiRoutes.js
-                        $.post("/api/friends", newFriend, function (data) {
-                            console.log(data)
-                            $("#friendName").text(data.name);
-                            $("#friendEmail").text(data.email);
-                            $("#friendImage").attr("src", data.photo);
-                            $("#exampleModal").modal("toggle")
-                        });
-
-                    } else {
-
-                        alert("Sorry, can't find your match. ALL the questions needs to be filled out. Try again!")
-                    }
-
-                });
+                    var currentURL = window.location.origin;
+                    // data = response.json from apiRoutes.js
+                    $.post("/api/friends", newFriend, function (data) {
+                        console.log(data)
+                        $("#friendName").text(data.name);
+                        $("#friendEmail").text(data.email);
+                        $("#friendImage").attr("src", data.photo);
+                        $("#exampleModal").modal("toggle")
+                    });
+                } else {
+                    alert("Sorry, can't find your match. ALL the questions needs to be filled out. Try again!")
+                }
             });
-
-        </script>
+        });
+    </script>
+    <!-- Javascript ends -->
 
 </body>
 
 </html>
-<!-- Javascript ends -->
 
 <!-- Footer -->
 <footer>
@@ -442,16 +383,9 @@
     </div>
 </footer>
 
-<!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Contact form JavaScript -->
 <script src="js-about/jqBootstrapValidation.js"></script>
 <script src="js-about/contact_me.js"></script>
-
-<!-- Custom scripts for this template -->
 <script src="js-about/agency.min.js"></script>

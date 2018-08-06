@@ -164,7 +164,7 @@ img::-moz-selection {
   }
 }
 
-header.masthead {
+ #about-header{
   text-align: center;
   color: white;
   background-image: url("../images/about/header-bg.jpg");
