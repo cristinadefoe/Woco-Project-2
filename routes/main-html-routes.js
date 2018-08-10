@@ -13,11 +13,6 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/mentors.html"));
   });
 
-  // Networking
-  app.get("/networking", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/networking.html"));
-  });
-
   // Friends's
   app.get("/friends", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/friends.html"));
@@ -31,11 +26,6 @@ module.exports = function (app) {
   // Rate your date
   app.get("/rating", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/rating.html"));
-  });
-
-  // Dating search
-  app.get("/search", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
 };

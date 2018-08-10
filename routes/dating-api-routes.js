@@ -73,16 +73,13 @@ module.exports = function (app) {
 
     });
 
-
     app.post("/api/clear", function () {
 
         // Empty out the arrays of data
         friendsArray = [];
 
-
         console.log(friendsArray);
     });
-
 
     // POST route for saving a new post
     app.post("/api/rating", function (req, res) {
