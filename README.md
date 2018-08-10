@@ -1,10 +1,10 @@
 # Project-2-WOCO
 
-Our application allows the user to choose from several surveys: friendship, mentorship and to find a date. After the user completes the survey it outputs the name of the person and their image of their best match. In the dating site, the user is able to rate their date and provide additional information about how their date was for other women to view.
+This application allows the user to choose from several surveys: friendship, mentorship and to find a date. After the user completes the survey it outputs the name of the person and the image of their best match. In the dating site, the user is able to rate their date and provide additional information about how their date was for other women to view.
 
 ## Getting Started
 
-* Link to site:
+* Link to site: https://enigmatic-springs-15510.herokuapp.com
 
 #### Screenshot
 
@@ -26,7 +26,11 @@ Our application allows the user to choose from several surveys: friendship, ment
 
 ## Authors
 
-* **Amy Austin,   **Cristina Defoe**),  **Nick Tsoukas
+**Amy Austin
+
+**Cristina Defoe
+
+**Nick Tsoukas
 
 ## Acknowledgments
 
