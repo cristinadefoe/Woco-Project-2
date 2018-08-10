@@ -8,7 +8,7 @@ This application allows the user to choose from several surveys: friendship, men
 
 #### Screenshot
 
-<img width="1030" alt="screen shot 2018-08-05 at 9 43 29 pm" src="https://user-images.githubusercontent.com/35505038/43695959-ee41e2a8-98f8-11e8-822b-4c3286248de7.png">
+![screen shot 2018-08-10 at 4 23 56 pm](https://user-images.githubusercontent.com/35505038/43983788-e0a005a2-9cb9-11e8-964e-abded76130a2.png)
 
 ## Built With
 
@@ -30,7 +30,7 @@ This application allows the user to choose from several surveys: friendship, men
 
 **Cristina Defoe
 
-**Nick Tsoukas
+**Nick Tsoukas 
 
 ## Acknowledgments
 
